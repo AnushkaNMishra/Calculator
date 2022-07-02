@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calculator </title>
+        <style>
+        body{
+            background-color: wheat;
+        }
+        p{
+            font-size: 60px;
+            text-align: center;
+            font-weight: bold;
+        }
+        *{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .wrap{
+            width: 30%;
+            margin: auto;
+            height: auto;
+            background: darkcyan;
+            padding: 40px;
+            padding-bottom: 40px;
+
+        }
+        input[type=text]{
+            width: 100%;
+            padding: 10px;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 25px;
+            border-radius: 10px;
+        }
+        input[type=button]{
+            width: 89px;
+            padding: 10px;
+            font-size: 27px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+        #clr{
+            width: 100%;
+        }
+        </style>
+    </head>
+    <body>
+        <p>CALCULATOR</p>
+        <div class="wrap">
+            
+            <form name="cal">
+                <input type="text" name="view">
+                <br><br>
+
+                <input type="button" value="9" onclick="cal.view.value+='9'">
+                <input type="button" value="8" onclick="cal.view.value+='8'">
+                <input type="button" value="7" onclick="cal.view.value+='7'">
+                <input type="button" value="+" onclick="cal.view.value+='+'">
+                <br>
+                <br>
+                <input type="button" value="6" onclick="cal.view.value+='6'">
+                <input type="button" value="5" onclick="cal.view.value+='5'">
+                <input type="button" value="4" onclick="cal.view.value+='4'">
+                <input type="button" value="-" onclick="cal.view.value+='-'">
+                <br> 
+                <br>
+                <input type="button" value="3" onclick="cal.view.value+='3'">
+                <input type="button" value="2" onclick="cal.view.value+='2'">
+                <input type="button" value="1" onclick="cal.view.value+='1'">
+                <input type="button" value="*" onclick="cal.view.value+='*'">
+                <br> 
+                <br>
+                <input type="button" value="/" onclick="cal.view.value+='/'">
+                <input type="button" value="0" onclick="cal.view.value+='0'">
+                <input type="button" value="%" onclick="cal.view.value+='%'">
+                <input type="button" value="=" onclick="cal.view.value =eval(cal.view.value)">
+                <br>
+                <br>
+                <input type="button" value="CLEAR" onclick="cal.view.value= ''" id="clr">
+            </form>
+        </div>
+    </body>
+</html>
